@@ -9,13 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
- 
+    var p=0.000
     @IBOutlet var val1: UITextField!
     @IBOutlet var val2: UITextField!
     @IBAction func dval1(sender: UITextField) {
         let duck=Float(val1.text!);
         val3.value=duck!;
-        n60.text="In Order to get a 60% you need..." 
+        var a=100.0-val4.value;
+        var b=duck!*(a/100);
+        var c=(60.0-b)/(duck!/100.0);
+        
+        
+        
+        let p1=c.description;
+        
+        n60.text="In Order to get a 60% you need..." + p1;
     }
     @IBOutlet var val3: UISlider!
     @IBOutlet var val4: UISlider!
